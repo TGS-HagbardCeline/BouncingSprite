@@ -37,7 +37,7 @@ s0  inc $d00e   ;sprite7 x coordinate +/- 1
     sta $d010      
 s1  cpx #$28    ;is sprite at left/right border?
     bne +
-    and #$ff    ;check if 8 bit of 8 ccordinate is set
+    and #$ff    ;check if bit 8 of x coordinate is set
 s2  bpl +
     lda s0      ;swap INC/DEC
     eor #$20
